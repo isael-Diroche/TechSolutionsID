@@ -33,4 +33,4 @@ jobs:
         run: python manage.py test
 
       - name: Deploy to Surge.sh
-        run: npx surge --project ./staticfiles/ --domain techsolutionsid.surge.sh
+        run: npx surge --project ./staticfiles --domain techsolutionsid.surge.sh
