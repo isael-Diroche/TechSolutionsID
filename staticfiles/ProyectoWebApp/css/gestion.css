@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,700&display=swap');
-
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
 
 
 /****************************************************************/
 
+.navbar {
+    background-color: #232323 !important;
+    border: 1px solid black;
+}
 
 body {
   /*font-family: 'Lora';*/
