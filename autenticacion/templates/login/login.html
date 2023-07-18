@@ -6,6 +6,8 @@
 
 {% block content %}
 
+<a href="{% url 'Home' %}"><box-icon name='arrow-back' ></box-icon>Regresar</a>
+
 <form method="post" action="" style="color: white;">
     {% csrf_token %}
 
