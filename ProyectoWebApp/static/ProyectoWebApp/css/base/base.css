@@ -67,6 +67,10 @@ a.back {
   color: #3561FF;
 }
 
+nav {
+  height: 100px;
+}
+
 nav, footer {
   display: flex;
   padding: 20px 50px;

@@ -15,8 +15,8 @@
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
-  border-radius: 7px;
-  background: #FFF;
+  border-radius: 8px;
+  background-color: #FFF;
 }
 .section-login .main-frame .left-container {
   position: relative;
@@ -28,7 +28,7 @@
   gap: 20px;
   flex: 1 0 0;
   align-self: stretch;
-  background: linear-gradient(0deg, rgba(57, 48, 48, 0.9) 0%, rgba(57, 48, 48, 0.9) 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(57, 48, 48, 0.9) 0%, rgba(57, 48, 48, 0.9) 100%), url("../../img/bg_main.jpg"), lightgray 50%/cover no-repeat;
 }
 .section-login .main-frame .left-container .logo {
   display: flex;
@@ -77,10 +77,14 @@
   align-items: center;
   gap: 10px;
   border-radius: 24px;
-  border: 1px solid #828282;
+  border: 1px solid #FFF;
+  opacity: 0.3;
+  transition: opacity 300ms ease-in-out;
 }
 .section-login .main-frame .left-container .socials a:hover {
+  opacity: 1;
   border-color: #FFF;
+  transition: opacity 300ms ease-in-out;
 }
 .section-login .main-frame .right-container {
   display: flex;
