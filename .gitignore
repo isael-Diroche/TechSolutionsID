@@ -1,5 +1,5 @@
 
 db.sqlite3
 staticfiles/
-.css.map
-.scss
+*.css.map
+*.scss
