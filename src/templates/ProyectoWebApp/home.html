@@ -1,0 +1,64 @@
+{% extends "base.html"%}
+
+{% block title %}
+    TechSolutionsID.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="box">
+        <div class="desc">
+            <h1>Mas que una tienda, somos una <span>solución</span></h1>
+            <p>Aquí encontraras todo lo que estas buscando servicios de reparación, instalación y tienda de equipos tecnológicos.</p>
+        </div>
+        <div class="buttons">
+            <a href="{% url 'Servicios'%}" id="servicios">Servicios</a>
+            <a href="{% url 'Tienda'%}" id="tienda">Tienda</a>
+        </div>
+    </div>
+</section>
+
+<section class="habilidades-section">
+    <div class="sec-present">
+        <span>Habilidades</span>
+        <h1>Nos describen ciertas habilidades, como...</h1>
+    </div>
+</section>
+
+<section class="servicios-section">
+    <div class="sec-present">
+        <span>Servicios</span>
+        <h1>Ofrecemos servicios de primera</h1>
+    </div>
+
+    <div class="container">
+
+    </div>
+</section>
+
+<section class="blog-section">
+    <div class="sec-present">
+        <span>BLog</span>
+        <h1>Tenemos un blog lleno de contenido</h1>
+    </div>
+
+    <div class="container">
+
+    </div>
+</section>
+
+<section class="contacto-section">
+    <div class="sec-present">
+        <span>Contacto</span>
+        <h1>Que estas esperando?  contactanos</h1>
+    </div>
+
+    <div class="container">
+        {% include 'widgets/formulario-contacto.html' %}
+    </div>
+</section>
+
+{% endblock %}

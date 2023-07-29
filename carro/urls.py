@@ -1,5 +1,5 @@
 from django.urls import path
-from carro.views import *
+from carro.views import agregar_producto,eliminar_producto,restar_producto,limpiar_carro
 
 app_name = "carro"
 
