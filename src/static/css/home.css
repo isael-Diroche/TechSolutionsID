@@ -10,4 +10,8 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 151.523%;
+}
+
+section .present {
+  display: block;
 }/*# sourceMappingURL=home.css.map */
