@@ -10,57 +10,27 @@
 
 {% block content %}
 
-<section class="section-login">
-    <div class="main-frame">
-        <div class="left-container">
-            <div class="logo">
-                <img src="{% static 'ProyectoWebApp/img/Logo.svg'%}" alt="TechSolutions">
-                <h3>TechSolutions</h3>
-            </div>
+<form action="" method="post">
+    {% csrf_token %}
+    <!--{{form|crispy}}-->
 
-            <p class="description">Puedes iniciar sesión con los datos que te registraste, y asi poder acceder a la tienda virtual de TechSolutions</p>
-
-            <div class="socials">
-                <a href="#"><box-icon type='logo' name='facebook' color="#fff" class="social-icon"></box-icon></a>
-                <a href="#"><box-icon name='twitter' type='logo' color="#fff"></box-icon></a>
-                <a href="#"><box-icon name='instagram-alt' type='logo' color='#fff'></box-icon></a>
-            </div>
-        </div>
-        <div class="right-container">
-            <a href="{% url 'Home' %}" class="button-open back"><box-icon name='arrow-back' color="#3561FF"></box-icon>Regresar</a>
-
-            <div class="formulary">
-                <h1>Login</h1>
-                <form action="" method="post">
-                    {% csrf_token %}
-                    <!--{{form|crispy}}-->
-
-                    <div id="div_id_username" class="form-group">
-                        <label for="id_username">Usuario</label>
-                        <div>
-                            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
-                        </div>
-                    </div>
-
-                    <div id="div_id_password" class="form-group">
-                        <label for="id_password" class=" requiredField">Contraseña</label>
-                        <div>
-                            <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
-                        </div>
-                    </div>
-
-                    <button class="button-rounded" type="submit"> Iniciar Sesión </button>
-
-                </form>
-                <div class="forgot-password">
-                    <p>Tienes problemas iniciando sesión?</p>
-                    <a href="#">Forgot Password</a>
-                </div>
-            </div>
+    <div id="div_id_username" class="form-group">
+        <label for="id_username">Usuario</label>
+        <div>
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
         </div>
     </div>
-</section>
 
+    <div id="div_id_password" class="form-group">
+        <label for="id_password" class=" requiredField">Contraseña</label>
+        <div>
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+        </div>
+    </div>
+
+    <button class="button-rounded" type="submit"> Iniciar Sesión </button>
+
+</form>
 
 <!--form method="post" action="" style="color: white;">
     {% csrf_token %}
@@ -78,8 +48,6 @@
 
     <button type="submit" class="btn btn-sussess"> Login </button>
     </div>
-
-
 </form-->
 
 {% endblock %}

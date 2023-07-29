@@ -7,92 +7,28 @@
         <title>{% block title %}{% endblock %}</title>
 
         {% load static %}
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{% static 'css/login-register.css' %}">
-        <link rel="stylesheet" href="{% static 'css/home.css'%}">
-        <link rel="stylesheet" href="{% static 'css/tienda.css'%}">
-        <link rel="stylesheet" href="{% static 'css/blog.css'%}">
-        <link rel="stylesheet" href="{% static 'css/services.css'%}">
-        <link rel="stylesheet" href="{% static 'css/contacto.css'%}">
+        {% include 'widgets/style_links.html' %}
 
     </head>
 
     <body>
-        <!-- Menu de navegacion -->
+        <!-- Si la direccion de la pagina actual no es igual a '/autenticacion/logear' esto se mostrara -->
         {% if request.path != '/autenticacion/logear'%}
-        <nav>
-            <div class="logo">
-                <a href="{% url 'Home'%}">
-                    <img src="{% static 'ProyectoWebApp/img/Logo.svg'%}" alt="techsolutionsid logo">
-                    <h3>TechSolutions</h3>
-                </a>
-            </div>
+        <!-- Menu de navegacion -->
 
-            <ul>
-                <li class="{% if request.path == '/' %} active {% endif %}"><a href="{% url 'Home'%}">Inicio</a></li>
-                <li class="{% if request.path == '/servicios/' %} active {% endif %}"><a href="{% url 'Servicios'%}">Servicios</a></li>
-                <li class="{% if request.path == '/tienda/' %} active {% endif %}"><a href="{% url 'Tienda'%}">Tienda</a></li>
-                <li class="{% if request.path|slice:':6' == '/blog/' %} active {% endif %}"><a href="{% url 'Blog'%}">Blog</a></li>
-                <li class="{% if request.path == '/contacto/' %} active {% endif %}"><a href="{% url 'Contacto'%}">Contacto</a></li>
-            </ul>
-
-            <div class="account">
-                {% if user.is_authenticated %}
-                    <a class="button-rounded cart" href="#">
-                        <box-icon name='cart' color='#ffffff' ></box-icon>
-                    </a>
-                    <a class="button-open"> {{user.username}}</a>
-                    <a class="" href="{% url 'cerrar_session' %}" title="Cerrar Sesion">
-                        <box-icon name='exit' color='#ffffff' style="width: 36px; height: 36px;"></box-icon>
-                    </a>
-                {% else %}
-                    <a href="{% url 'logear'%}" class="button-rounded">Login</a>
-                    <a href="{% url 'Autenticacion'%}" class="button-open">Registrarte</a>
-                {% endif %}
-
-            </div>
-        </nav>
         {% else %}
 
         {% endif %}
+
 
         <!-- Contenido Cambiante -->
         {% block content %}
 
         {% endblock %}
 
-        <!-- Pie de pagina -->
         {% if request.path != '/autenticacion/logear'%}
-        <footer>
-            <div class="page-links">
-                <a href="{% url 'Home'%}" class="logo">
-                    <img src="{% static 'ProyectoWebApp/img/Logo.svg'%}" alt="TechSolutionsID Logo" class="logo">
-                    <h3>TechSolutions</h3>
-                </a>
-
-                <ul>
-                    <li><a href="{% url 'Home'%}">Inicio</a></li>
-                    <li><a href="{% url 'Servicios'%}">Servicios</a></li>
-                    <li><a href="{% url 'Tienda'%}">Tienda</a></li>
-                    <li><a href="{% url 'Blog'%}">Blog</a></li>
-                    <li><a href="{% url 'Contacto'%}">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="legal-links">
-                {% now "Y" as current_year %}
-                <p>TechSolutionsID @ {{current_year}}. All rights reserved.</p>
-                <ul>
-                    <li><a class="button-open" href="#">Cookies</a></li>•
-                    <li><a href="#">Aviso legal</a></li>•
-                    <li><a href="#">Politicas de privacidad</a></li>
-                </ul>
-            </div>
-        </footer>
+        <!-- Pie de pagina -->
+        
         {% else %}
 
         {% endif %}
