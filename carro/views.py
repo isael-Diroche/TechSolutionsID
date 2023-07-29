@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from carro.carro import Carro
-from tienda.models import Producto
+from apps.tienda.models import Producto
 
 # Create your views here.
 

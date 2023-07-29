@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>{% block title %}{% endblock %}</title>
+
+        {% load static %}
+        {% include 'widgets/style_links.html' %}
+
+    </head>
+
+    <body>
+        <!-- Si la direccion de la pagina actual no es igual a '/autenticacion/logear' esto se mostrara -->
+        {% if request.path != '/autenticacion/logear'%}
+        <!-- Menu de navegacion -->
+
+        {% else %}
+
+        {% endif %}
+
+
+        <!-- Contenido Cambiante -->
+        {% block content %}
+
+        {% endblock %}
+
+        {% if request.path != '/autenticacion/logear'%}
+        <!-- Pie de pagina -->
+        
+        {% else %}
+
+        {% endif %}
+
+        <!-- Bootstrap -->
+        <script src="{% static 'ProyectoWebApp/vendor/jquery/jquery.min.js'%}"></script>
+        <script src="{% static 'ProyectoWebApp/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </body>
+
+
+</html>
