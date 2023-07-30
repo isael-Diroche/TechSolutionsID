@@ -9,7 +9,7 @@ def home(request):
         'title': 'TechSolutionsID',
     }
     
-    return render(request, "ProyectoWebApp/home.html", context)
+    return render(request, "home/home.html", context)
 
 # ------------------------------------------------------------------------
 

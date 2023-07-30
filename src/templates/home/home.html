@@ -1,0 +1,209 @@
+{% extends "base.html"%}
+
+{% block title %}
+    TechSolutionsID.com
+{% endblock %}
+{% load static %}
+
+{% block content %}
+<!-- Seccion de presentacion -->
+<section class="sec-hero">
+    <div class="text">
+        <span class="hashtag">tag</span>
+        <h1 class="title">title</h1>
+        <p class="desc">description</p>
+        <div>
+            <a href="{% url 'Servicios' %}">servicios</a>
+        </div>
+    </div>
+</section>
+
+<!-- Seccion de Porque Escojernos -->
+<section class="sec-choose-us">
+    <div class="present">
+        <span>que hacemos?</span>
+        <h1>Nuestros Servicios Logísticos</h1>
+    </div>
+    <div class="content">
+        <ul>
+            <li>
+                <img src="#" alt="#">
+                <h3>Entrega Rápida</h3>
+                <p>Garantizamos la entrega puntual y eficiente de nuestros productos en el menor tiempo posible.</p>
+            </li>
+            <li>
+                <img src="#" alt="#">
+                <h3>La Mejor Calidad</h3>
+                <p>Con el compromiso de brindar un servicio de alta calidad a nuestros clientes.</p>
+            </li>
+            <li>
+                <img src="#" alt="#">
+                <h3>Venta de Equipos</h3>
+                <p>Ofrecemos una selección de equipos y accesorios tecnológicos nuevos y de primera calidad.</p>
+            </li>
+            <li>
+                <img src="#" alt="#">
+                <h3>Soporte 24/7</h3>
+                <p>Nuestro equipo de atención al cliente está disponible las 24 horas, los 7 días de la semana.</p>
+            </li>
+            <li>
+                <img src="#" alt="#">
+                <h3>Reparación</h3>
+                <p>Servicios de reparación especializados para mantener tus equipos en óptimas condiciones.</p>
+            </li>
+            <li>
+                <img src="#" alt="#">
+                <h3>Mantenimiento</h3>
+                <p>Mantenimiento para asegurar el rendimiento óptimo de tus equipos y minimizar el riesgo de fallas.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Seccion de acerca de nosotros -->
+<section class="sec-about-us">
+    <img src="#" alt="">
+    <aside>
+        <div class="present">
+            <span>Nosotros</span>
+            <h1>Acerca de nuestra la empresa</h1>
+        </div>
+        <p>
+            {% lorem 40 w random %}
+        </p>
+        <h4>Nuestro enfoque</h4>
+        <p>
+            {% lorem 40 w random %}
+            <span>¡Bienvenido a una experiencia única con nosotros!</span>
+        </p>
+    </aside>
+</section>
+
+<!-- Seccion de blog recientes -->
+<section class="sec-blog">
+    <div class="present">
+        <span>Blog</span>
+        <h1>Tenemos un blog lleno de contenido</h1>
+    </div>
+    <div class="content">
+        <article class="card">
+            <div class="imagen">
+                <img src="#" alt="#">
+                <div class="categories">
+                    <div class="badge">badge</div>
+                    <div class="badge">badge</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="heading">
+                    <h3 class="publish">Author Do Date</h3>
+                </div>
+                <div class="heading-icon">
+                    <h2 class="heading">Post title</h2>
+                    <img src="#" alt="#">
+                </div>
+                <div class="description">
+                    <p>{% lorem 15 w random %}</p>
+                </div>
+            </div>
+
+        </article>        
+    </div>
+</section>
+
+<!-- Seccion de preguntas frecuentes -->
+<section class="sec-faqs">
+    <aside>
+        <div class="present">
+            <span>FAQs</span>
+            <h1>Preguntas frecuentes</h1>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div>
+                        <h1>{% lorem 5 w random %}</h1>
+                        <img src="#" alt="#">
+                    </div>
+                    <p>
+                        {% lorem 50 w random %}
+                    </p>
+                </li>
+                <li>
+                    <div>
+                        <h1>{% lorem 5 w random %}</h1>
+                        <img src="#" alt="#">
+                    </div>
+                    <p>
+                        {% lorem 50 w random %}
+                    </p>
+                </li>
+                <li>
+                    <div>
+                        <h1>{% lorem 5 w random %}</h1>
+                        <img src="#" alt="#">
+                    </div>
+                    <p>
+                        {% lorem 50 w random %}
+                    </p>
+                </li>
+                <li>
+                    <div>
+                        <h1>{% lorem 5 w random %}</h1>
+                        <img src="#" alt="#">
+                    </div>
+                    <p>
+                        {% lorem 50 w random %}
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <img src="#" alt="#">
+</section>
+
+<!-- Seccion de contacto rapido -->
+<section class="sec-contacto">
+    <div class="present">
+        <span>Contacto</span>
+        <h1>Que estas esperando? contáctanos ahora</h1>
+    </div>
+    <div class="content">
+        <div class="formulary">
+            <form action="">
+                <div class="title">
+                    <h1></h1>
+                </div>
+                <div class="name-email">
+                    <input type="text">
+                    <input type="text">
+                </div>
+                <input type="text"><br>
+                <input type="text"><br>
+                <button>Enviar mensaje</button>
+            </form>
+        </div>
+        <ul class="contact-info">
+            <li>
+                <div class="box">
+                    <img src="#" alt="#">
+                </div>
+                <h3>label</h3>
+            </li>
+            <li>
+                <div class="box">
+                    <img src="#" alt="#">
+                </div>
+                <h3>label</h3>
+            </li>
+            <li>
+                <div class="box">
+                    <img src="#" alt="#">
+                </div>
+                <h3>label</h3>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}
