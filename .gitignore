@@ -1,8 +1,5 @@
 
-db.sqlite3
 staticfiles/
-*.css.map
-*.scss
 
 # Byte-compiled git / optimized / DLL files
 /__pycache__/
