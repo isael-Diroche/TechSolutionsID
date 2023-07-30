@@ -4,8 +4,8 @@ staticfiles/
 *.css.map
 *.scss
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
+# Byte-compiled git / optimized / DLL files
+/__pycache__/
 *.py[cod]
 *$py.class
 
