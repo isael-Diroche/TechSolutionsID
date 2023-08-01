@@ -205,4 +205,91 @@ section .present .title {
   font-style: normal;
   font-weight: 400;
   line-height: 151.523%;
+}
+
+.sec-about-us {
+  /* Estilos generales para la clase "sec-about-us" */
+  padding: 60px 100px 60px 0px;
+  align-items: center;
+  gap: 100px;
+  align-self: stretch;
+  flex-direction: row;
+}
+.sec-about-us img {
+  /* Estilos para las imágenes <img> dentro de la clase "sec-about-us" */
+  width: 736px;
+  height: 531.5px;
+}
+.sec-about-us aside {
+  /* Estilos para el elemento <aside> dentro de la clase "sec-about-us" */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 19px;
+  align-self: stretch;
+}
+.sec-about-us aside .present {
+  /* Estilos para la clase "present" dentro de la clase "sec-about-us" */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+  align-self: stretch;
+}
+.sec-about-us aside .present .badge {
+  /* Estilos para los elementos <span> dentro de la clase "present" */
+  /* Estilos para la clase "badge" dentro de la clase "present" */
+  display: flex;
+  height: 22px;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-left: 3px solid #1565C0;
+  background: var(--azul-50, #E3F2FD);
+  color: var(--azul-600, #1E88E5);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.sec-about-us aside .present .title {
+  /* Estilos para los encabezados <h1> dentro de la clase "present" */
+  color: var(--azul-900, #0D47A1);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.sec-about-us aside p {
+  /* Estilos para los párrafos <p> dentro del elemento <aside> */
+  color: #666C89;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 151.523%;
+}
+.sec-about-us aside p span {
+  /* Estilos para los elementos <span> dentro de los párrafos */
+  color: var(--azul-700, #1976D2);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 151.523%;
+}
+.sec-about-us aside h4 {
+  /* Estilos para los encabezados <h4> dentro del elemento <aside> */
+  color: var(--azul-900, #0D47A1);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 151.523%;
 }/*# sourceMappingURL=home.css.map */
