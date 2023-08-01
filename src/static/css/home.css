@@ -5,6 +5,10 @@
   font-family: Inter;
 }
 
+a {
+  text-decoration: none;
+}
+
 p {
   font-size: 16px;
   font-style: normal;
@@ -12,6 +16,138 @@ p {
   line-height: 151.523%;
 }
 
+section {
+  display: flex;
+  padding: 60px 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  align-self: stretch;
+  background: #FFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.252);
+}
 section .present {
-  display: block;
+  /* Estilos generales para la clase "present" */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  align-self: stretch;
+}
+section .present .badge {
+  /* Estilos para la clase "badge" dentro de la clase "present" */
+  display: flex;
+  height: 22px;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-left: 3px solid #1565C0;
+  background: var(--azul-50, #E3F2FD);
+  color: var(--azul-600, #1E88E5);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+section .present .title {
+  /* Estilos para la clase "title" dentro de la clase "present" */
+  color: var(--azul-900, #0D47A1);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.sec-hero {
+  /* Estilos generales para la clase "sec-hero" */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-image: url("../img/hero-imagen.png");
+  background-size: cover;
+  background-position: center center;
+}
+.sec-hero .text {
+  /* Estilos para la clase "text" dentro de la clase "sec-hero" */
+  display: flex;
+  width: 754px;
+  padding: 0px 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 23px;
+  flex: 1 0 0;
+  border-radius: 15px;
+}
+.sec-hero .text .hashtag {
+  /* Estilos para la clase "hashtag" dentro de la clase "text" */
+  color: var(--azul-800, #1565C0);
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.sec-hero .text .title {
+  /* Estilos para la clase "title" dentro de la clase "text" */
+  color: var(--azul-900, #0D47A1);
+  text-align: right;
+  font-family: Poppins;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px;
+}
+.sec-hero .text .desc {
+  /* Estilos para la clase "desc" dentro de la clase "text" */
+  color: var(--black, #000);
+  text-align: right;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6999999881;
+}
+.sec-hero .text .link {
+  /* Estilos para la clase "link" dentro de la clase "text" */
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 237px;
+  height: 80px;
+  border-radius: 13px;
+  background: #191B1A;
+  box-shadow: -3px 5px 5px 0px rgba(255, 255, 255, 0.5) inset, -2px 2px 2px 0px rgba(0, 0, 0, 0.5) inset;
+}
+.sec-hero .text .link a {
+  /* Estilos para el enlace <a> dentro de la clase "link" */
+  color: #FFF;
+  text-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.25);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.sec-hero .text .link:hover {
+  background: #111211;
 }/*# sourceMappingURL=home.css.map */
