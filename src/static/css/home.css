@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,10 @@
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 p {
@@ -150,4 +155,54 @@ section .present .title {
 }
 .sec-hero .text .link:hover {
   background: #111211;
+}
+
+.sec-choose-us .content {
+  /* Estilos para la clase "content" dentro de la clase "sec-choose-us" */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 53px;
+}
+.sec-choose-us .content ul {
+  /* Estilos para la lista <ul> dentro de la clase "content" */
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 55px 192px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sec-choose-us .content ul li {
+  /* Estilos para los elementos <li> dentro de la lista <ul> */
+  display: flex;
+  width: 270px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+.sec-choose-us .content ul li img {
+  /* Estilos para las imágenes <img> dentro de los elementos <li> */
+  width: 48px;
+  height: 48px;
+}
+.sec-choose-us .content ul li h3 {
+  /* Estilos para los encabezados <h3> dentro de los elementos <li> */
+  color: var(--azul-900, #0D47A1);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sec-choose-us .content ul li p {
+  /* Estilos para los párrafos <p> dentro de los elementos <li> */
+  color: #666C89;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 151.523%;
 }/*# sourceMappingURL=home.css.map */
