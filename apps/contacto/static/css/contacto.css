@@ -1,1 +1,126 @@
-/*# sourceMappingURL=contacto.css.map */
+.formulary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.formulary form {
+  display: flex;
+  width: 637px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.input-data {
+  margin-top: 20px;
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.input-data input, textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #596eda;
+  bottom: 15px;
+}
+
+.input-data textarea:focus ~ label,
+.input-data textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #596eda;
+  bottom: 25px;
+}
+
+.input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #666;
+  transition: all 0.3s ease;
+  font-family: Inter;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.input-data .underline {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.input-data .underline::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  transition: transform 0.3s ease-in;
+}
+
+.input-data input:focus ~ .underline:before, textarea:focus ~ .underline::before .input-data input:valid ~ .underline::before,
+textarea:valid ~ .underline::before {
+  transform: scaleX(1);
+}
+
+textarea {
+  position: absolute;
+  min-height: 40px;
+  resize: vertical;
+  /* Estilo del pulgar (scrollbar thumb) */
+  /* Estilo del track (scrollbar track) */
+}
+textarea::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 5px; /* Radio de las esquinas del pulgar */
+}
+textarea::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color del track de la barra de desplazamiento */
+}
+
+.button-send input {
+  width: 150px;
+  display: inline-flex;
+  height: 52px;
+  padding: 0px 23px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  cursor: pointer;
+  background: var(--azul-800, #1565C0);
+  transition: background 0.3s ease;
+}
+.button-send input:hover {
+  background: var(--azul-900, #0D47A1);
+  transition: background 0.3s ease;
+}
+.button-send input:active {
+  background: var(--azul-700, #1976D2);
+}/*# sourceMappingURL=contacto.css.map */

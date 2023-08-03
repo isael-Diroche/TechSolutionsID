@@ -389,7 +389,8 @@ section .present .title {
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
+  /* 142.857% */
   text-transform: capitalize;
 }
 .sec-blog .content a .card .content .heading-text .heading-icon {
@@ -437,4 +438,77 @@ section .present .title {
   background: #FFF;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 250ms ease;
+}
+
+.sec-contacto {
+  /* Estilos generales para la clase "sec-contacto" */
+}
+.sec-contacto .content {
+  /* Estilos para la clase "content" dentro de la clase "sec-contacto" */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  align-self: stretch;
+}
+.sec-contacto .content .formulary form .title {
+  /* Estilos para la clase "title" dentro del formulario */
+  display: flex;
+  height: 54px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+.sec-contacto .content .formulary form .title h1 {
+  /* Estilos para los encabezados <h1> dentro de la clase "title" */
+  color: var(--azul-900, #0D47A1);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.sec-contacto .content .contact-info {
+  /* Estilos para la lista <ul> con clase "contact-info" dentro de la clase "content" */
+  display: flex;
+  width: 333px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+.sec-contacto .content .contact-info li {
+  /* Estilos para los elementos <li> dentro de la lista */
+  display: flex;
+  height: 87px;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 6px;
+}
+.sec-contacto .content .contact-info li .box {
+  /* Estilos para la clase "box" dentro de los elementos <li> */
+  display: flex;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: var(--azul-900, #0D47A1);
+}
+.sec-contacto .content .contact-info li .box img {
+  /* Estilos para las imágenes <img> dentro de la clase "box" */
+}
+.sec-contacto .content .contact-info li h3 {
+  /* Estilos para los encabezados <h3> dentro de los elementos <li> */
+  color: var(--azul-900, #0D47A1);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }/*# sourceMappingURL=home.css.map */

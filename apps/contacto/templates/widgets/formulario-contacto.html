@@ -1,5 +1,44 @@
 <!-- Widget del formulario de contacto -->
 
-<h1>
-    Formulario funcionando
-</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="title">
+        <h1>Envianos un mensaje</h1>
+        {% if "valido" in request.GET %}
+            <p style="color:white;" >Informacion enviada correctamente!</p>
+        {% endif %}
+    </div>
+
+    
+    <input type="hidden" name="csrfmiddlewaretoken" value="DpISB9VkV5nhaeHlkVxZCXg7oLUosWBecVJMjbuwscwhv9lCNmmftUFjTcB8QzTT">
+
+    <div style="display: flex; gap: 20px; width: 100%;">
+        <div class="input-data">
+            <input type="text" name="nombre" required="" id="id_nombre">   
+            <div class="underline"></div>
+            <label for="id_nombre">Nombre</label>
+        </div>
+        <div class="input-data">            
+            <input type="email" name="email" required id="id_email">            
+            <div class="underline"></div>
+            <label for="id_email">Email</label>
+        </div>
+    </div>
+
+    <div class="input-data">
+        <input type="text" name="asunto" required id="id_asunto">
+        <div class="underline"></div>
+        <label for="id_asunto">Asunto</label>
+    </div>
+
+    <div class="input-data">
+        <textarea name="contenido" cols="80" rows="10" required id="id_contenido"></textarea>
+        <div class="underline"></div>
+        <label for="id_contenido">Contenido</label>
+    </div>
+
+    <div class="input-data button-send" >
+        <input type="submit" name="" id="" value="Enviar">
+    </div>
+
+</form>

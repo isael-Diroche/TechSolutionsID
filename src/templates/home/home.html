@@ -215,39 +215,43 @@
     </div>
     <div class="content">
         <div class="formulary">
-            <form action="">
-                <div class="title">
-                    <h1></h1>
-                </div>
-                <div class="name-email">
-                    <input type="text">
-                    <input type="text">
-                </div>
-                <input type="text"><br>
-                <input type="text"><br>
-                <button>Enviar mensaje</button>
-            </form>
+            {% include 'widgets/formulario-contacto.html'%}
         </div>
         <ul class="contact-info">
             <li>
                 <div class="box">
-                    <img src="#" alt="#">
+                    <box-icon name='world' color='#ffffff' ></box-icon>
                 </div>
-                <h3>label</h3>
+                <h3>www.techsolutionsID.com</h3>
             </li>
             <li>
                 <div class="box">
-                    <img src="#" alt="#">
+                    <box-icon name='phone' color='#ffffff' ></box-icon>
                 </div>
-                <h3>label</h3>
+                <h3>+1(809) 678 1819</h3>
             </li>
             <li>
                 <div class="box">
-                    <img src="#" alt="#">
+                    <box-icon name='envelope' color='#ffffff' ></box-icon>
                 </div>
-                <h3>label</h3>
+                <h3>info@techsolutionsid.com</h3>
             </li>
         </ul>
+    </div>
+</section>
+
+<section>
+    <div class="present">
+        <span class="badge">Badge</span>
+        <h1 class="title">Hola mundo</h1>
+    </div>
+    <div class="content">
+        <form action="" method="POST">
+            {{miFormulario.as_table}}
+            <input type="submit" name="" id="send" value="Enviar">
+            <label for="send">Enviar</label>
+            <button value="Enviar" type="submit">Enviar</button>
+        </form>
     </div>
 </section>
 

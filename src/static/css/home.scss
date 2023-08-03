@@ -334,17 +334,17 @@ section {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    
+
     .content {
         /* Estilos para la clase "content" dentro de la clase "sec-blog" */
-            align-items: flex-start;
-            justify-content: center;
-            display: flex;
-            padding: 40px 0px;
-            align-content: center;
-            gap: 60px;
-            align-self: stretch;
-            flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        display: flex;
+        padding: 40px 0px;
+        align-content: center;
+        gap: 60px;
+        align-self: stretch;
+        flex-wrap: wrap;
 
         a {
             .card {
@@ -363,8 +363,8 @@ section {
                     align-items: center;
                     align-self: stretch;
 
-                    position: relative; 
-                    overflow: hidden; 
+                    position: relative;
+                    overflow: hidden;
 
                     img {
                         /* Estilos para las imágenes <img> dentro de la clase "imagen" */
@@ -372,7 +372,7 @@ section {
                         height: 100%;
                         object-fit: cover;
                         object-position: center;
-                    
+
                     }
 
                     .categories {
@@ -396,7 +396,7 @@ section {
 
                             color: var(--white, #FFF);
                             text-align: center;
-                            
+
                             font-family: Inter;
                             font-size: 14px;
                             font-style: normal;
@@ -429,7 +429,8 @@ section {
                             font-size: 14px;
                             font-style: normal;
                             font-weight: 600;
-                            line-height: 20px; /* 142.857% */
+                            line-height: 20px;
+                            /* 142.857% */
                             text-transform: capitalize;
                         }
 
@@ -443,10 +444,11 @@ section {
                             h2 {
                                 /* Estilos para los encabezados <h2> dentro de la clase "heading-icon" */
                                 overflow: hidden;
-                                color: #1A1A1A;;
+                                color: #1A1A1A;
+                                ;
                                 text-overflow: ellipsis;
 
-                                
+
                                 font-family: Inter;
                                 font-size: 24px;
                                 font-style: normal;
@@ -470,7 +472,7 @@ section {
                             overflow: hidden;
                             color: #667085;
                             text-overflow: ellipsis;
-                            
+
                             font-family: Inter;
                             font-size: 16px;
                             font-style: normal;
@@ -481,15 +483,103 @@ section {
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 3;
                             align-self: stretch;
-                        }                    
+                        }
                     }
-                }            }            
-            
+                }
+            }
+
             &:hover {
                 .card {
                     background: #FFF;
                     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.10);
                     transition: box-shadow 250ms ease;
+                }
+            }
+        }
+    }
+}
+
+.sec-contacto {
+    /* Estilos generales para la clase "sec-contacto" */
+
+    .content {
+        /* Estilos para la clase "content" dentro de la clase "sec-contacto" */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        align-self: stretch;
+
+        .formulary {
+
+            form {
+                .title {
+                    /* Estilos para la clase "title" dentro del formulario */
+                    display: flex;
+                    height: 54px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    align-self: stretch;
+
+                    h1 {
+                        /* Estilos para los encabezados <h1> dentro de la clase "title" */
+                        color: var(--azul-900, #0D47A1);
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+
+        .contact-info {
+            /* Estilos para la lista <ul> con clase "contact-info" dentro de la clase "content" */
+            display: flex;
+            width: 333px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            align-self: stretch;
+
+            li {
+                /* Estilos para los elementos <li> dentro de la lista */
+                display: flex;
+                height: 87px;
+                padding: 10px;
+                align-items: center;
+                gap: 10px;
+                align-self: stretch;
+                border-radius: 6px;
+
+                .box {
+                    /* Estilos para la clase "box" dentro de los elementos <li> */
+                    display: flex;
+                    width: 64px;
+                    height: 64px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    border-radius: 40px;
+                    background: var(--azul-900, #0D47A1);
+
+                    img {
+                        /* Estilos para las imágenes <img> dentro de la clase "box" */
+                    }
+                }
+
+                h3 {
+                    /* Estilos para los encabezados <h3> dentro de los elementos <li> */
+                    color: var(--azul-900, #0D47A1);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 100%;
                 }
             }
         }
