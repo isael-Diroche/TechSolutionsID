@@ -8,7 +8,6 @@
 
         {% load static %}
         {% include 'widgets/style_links.html' %}
-
     </head>
 
     <body>
@@ -34,10 +33,9 @@
         {% endif %}
 
         <!-- Bootstrap -->
-        <script src="{% static 'ProyectoWebApp/vendor/jquery/jquery.min.js'%}"></script>
-        <script src="{% static 'ProyectoWebApp/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+        {% include 'widgets/scripts.html' %}
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
