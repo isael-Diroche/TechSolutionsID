@@ -13,7 +13,52 @@
     <body>
         <!-- Si la direccion de la pagina actual no es igual a '/autenticacion/logear' esto se mostrara -->
         {% if request.path != '/autenticacion/logear'%}
+
         <!-- Menu de navegacion -->
+        <nav>
+            <div class="top-nav">
+                <a class="logo" href="{% url 'Home'%}">
+                    <img src="{% static 'img/logo.svg' %}" alt="logo">
+                    <h3>TechSolutions</h3>
+                </a>
+                <ul class="menu">
+                    <li class="item {% if request.path == '/' %} active {% endif %}">
+                        <a href="{% url 'Home'%}">Inicio</a>
+                    </li>
+                    <li class="item {% if request.path == '/servicios/' %} active {% endif %}">
+                        <a href="{% url 'Servicios'%}">Servicios</a>
+                    </li>
+                    <li class="item {% if request.path == '/tienda/' %} active {% endif %}">
+                        <a href="{% url 'Tienda'%}">Tienda</a>
+                    </li>
+                    <li class="item {% if request.path == '/blog/' %} active {% endif %}">
+                        <a href="{% url 'Blog'%}">Blog</a>
+                    </li>
+                    <li class="item {% if request.path == '/contacto/' %} active {% endif %}">
+                        <a href="{% url 'Contacto'%}">Contacto</a>
+                    </li>
+                </ul>
+
+                {% if user.is_authenticated %}
+                <div class="auth" style="gap: 22px;">
+                    <a class="" title="Usuario" href="#">
+                        <box-icon name='user'></box-icon>
+                    </a>
+                    <a class="" title="Carrito" href="#">
+                        <box-icon name='cart' ></box-icon>
+                    </a>
+                    <a class="button rounded exit-button" title="Cerrar Sesión" href="{% url 'cerrar_session'%}">
+                        <box-icon name='exit' color='#ffffff' ></box-icon>
+                    </a>
+                </div>
+                {% else %}
+                <div class="auth">                            
+                    <a class="button rounded" href="{% url 'logear'%}">Login</a>
+                    <a class="button" href="{% url 'Autenticacion'%}">Registrate</a>
+                </div>
+                {% endif %}
+            </div>
+        </nav>
 
         {% else %}
 
