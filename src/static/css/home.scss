@@ -625,8 +625,6 @@ section {
     }
 }
 
-
-
 .sec-contacto {
     /* Estilos generales para la clase "sec-contacto" */
 
@@ -712,9 +710,6 @@ section {
 
 
 
-
-
-
 // Navbar
 
 nav {
@@ -746,7 +741,7 @@ nav {
             height: 60px;
             align-items: center;
         }
-        
+
         ul.menu {
             display: flex;
             justify-content: center;
@@ -760,7 +755,7 @@ nav {
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
-                
+
                 a {
                     color: var(--azul-900, #0D47A1);
                     font-family: Poppins;
@@ -784,6 +779,45 @@ nav {
             gap: 4px;
             align-self: stretch;
         }
+
+        .toggle-menu-btn {
+            display: none; // Ocultar el botón por defecto en pantallas grandes
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .top-nav {
+            flex-direction: column;
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+
+                li {
+                    a {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .auth {
+                text-align: center;
+                margin-top: 10px;
+
+                .button {
+                    display: block;
+                }
+            }
+
+            .toggle-menu-btn {
+                display: block; // Mostrar el botón en pantallas pequeñas
+                background-color: transparent;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+        }
     }
 }
 
@@ -796,7 +830,7 @@ nav {
     gap: 10px;
     flex-shrink: 0;
 
-    
+
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;

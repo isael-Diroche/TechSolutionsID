@@ -13,31 +13,35 @@
     <body>
         <!-- Si la direccion de la pagina actual no es igual a '/autenticacion/logear' esto se mostrara -->
         {% if request.path != '/autenticacion/logear'%}
-        
+
         <!-- Menu de navegacion -->
         <nav>
             <div class="top-nav">
                 <div class="logo"></div>
                 <ul class="menu">
                     <li class="item active">
-                        <a href="#">Inicio</a>
+                        <a href="{% url 'Home'%}">Inicio</a>
                     </li>
                     <li class="item">
-                        <a href="#">Servicios</a>
+                        <a href="{% url 'Servicios'%}">Servicios</a>
                     </li>
                     <li class="item">
-                        <a href="#">Tienda</a>
+                        <a href="{% url 'Tienda'%}">Tienda</a>
                     </li>
                     <li class="item">
-                        <a href="#">Blog</a>
+                        <a href="{% url 'Blog'%}">Blog</a>
                     </li>
                     <li class="item">
-                        <a href="#">Contacto</a>
+                        <a href="{% url 'Contacto'%}">Contacto</a>
                     </li>
                 </ul>
                 <div class="auth">
-                    <a href="#" class="button rounded">Login</a>
-                    <a href="#" class="button">Registrate</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'cerrar_session'%}"></a>
+                    {% else %}
+                        <a href="{% url 'logear'%}" class="button rounded">Login</a>
+                        <a href="{% url 'Autenticacion'%}" class="button">Registrate</a>
+                    {% endif %}
                 </div>
             </div>
         </nav>
@@ -58,6 +62,15 @@
         {% else %}
 
         {% endif %}
+        
+        <script>
+            $(document).ready(function() {
+                // Al hacer clic en el botón toggle-menu-btn, mostramos u ocultamos el menú
+                $('.toggle-menu-btn').on('click', function() {
+                  $('.menu').slideToggle();
+                });
+              });
+        </script>
 
         <!-- Bootstrap -->
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

@@ -682,6 +682,36 @@ nav .top-nav .auth {
   gap: 4px;
   align-self: stretch;
 }
+nav .top-nav .toggle-menu-btn {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  nav .top-nav {
+    flex-direction: column;
+  }
+  nav .top-nav .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  nav .top-nav .menu li a {
+    text-align: center;
+  }
+  nav .top-nav .auth {
+    text-align: center;
+    margin-top: 10px;
+  }
+  nav .top-nav .auth .button {
+    display: block;
+  }
+  nav .top-nav .toggle-menu-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+}
 
 .button {
   display: inline-flex;
