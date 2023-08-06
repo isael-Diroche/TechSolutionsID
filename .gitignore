@@ -1,5 +1,7 @@
 
 staticfiles/
+test/
+test.html
 
 # Byte-compiled git / optimized / DLL files
 /__pycache__/
