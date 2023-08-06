@@ -13,7 +13,34 @@
     <body>
         <!-- Si la direccion de la pagina actual no es igual a '/autenticacion/logear' esto se mostrara -->
         {% if request.path != '/autenticacion/logear'%}
+        
         <!-- Menu de navegacion -->
+        <nav>
+            <div class="top-nav">
+                <div class="logo"></div>
+                <ul class="menu">
+                    <li class="item active">
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">Servicios</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">Tienda</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+                <div class="auth">
+                    <a href="#" class="button rounded">Login</a>
+                    <a href="#" class="button">Registrate</a>
+                </div>
+            </div>
+        </nav>
 
         {% else %}
 
