@@ -10,6 +10,22 @@
 
 {% block content %}
 
+<section class="auth sec-register">
+    <div class="formulary">
+        <a href="{% url 'Home'%}" class="button open"><box-icon name='left-arrow-alt' color='#0d47a1' ></box-icon> Regresar</a>
+        <div class="post-form">
+            <h1 class="title">Registro</h1>
+            <form action="" method="post">
+
+            </form>
+            <div class="forgot-password">
+                <p>Ya estas registrado?</p>
+                <a href="{% url 'Autenticacion'%}" class="">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <form method="post" action="" style="color: white;">
     {% csrf_token %}
 

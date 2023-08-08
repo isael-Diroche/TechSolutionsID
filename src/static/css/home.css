@@ -1,4 +1,19 @@
 @charset "UTF-8";
+:root {
+  --black: #000;
+  --white: #fff;
+  --azul-050: #E3F2FD;
+  --azul-100: #BBDEFB;
+  --azul-200: #90CAF9;
+  --azul-300: #64B5F6;
+  --azul-400: #42A5F5;
+  --azul-500: #2196F3;
+  --azul-600: #1E88E5;
+  --azul-700: #1976D2;
+  --azul-800: #1565C0;
+  --azul-900: #0D47A1;
+}
+
 * {
   margin: 0;
   padding: 0;
