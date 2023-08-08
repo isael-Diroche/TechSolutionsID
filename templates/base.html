@@ -12,7 +12,7 @@
 
     <body>
         <!-- Si la direccion de la pagina actual no es igual a '/autenticacion/logear' esto se mostrara -->
-        {% if request.path != '/autenticacion/logear'%}
+        {% if '/autenticacion/' not in request.path %}
 
         <!-- Menu de navegacion -->
         <nav>
@@ -41,7 +41,7 @@
 
                 {% if user.is_authenticated %}
                 <div class="auth" style="gap: 22px;">
-                    <a class="" title="Usuario" href="#">
+                    <a class="" title="{{user.username}}" href="#">
                         <box-icon name='user'></box-icon>
                     </a>
                     <a class="" title="Carrito" href="#">

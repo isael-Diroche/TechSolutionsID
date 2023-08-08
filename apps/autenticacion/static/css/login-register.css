@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.sec-login {
+section.auth {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center center;
 }
-.sec-login .formulary {
+section.auth .formulary {
   display: flex;
   width: 450px;
   padding: 40px 29px;
@@ -24,7 +24,7 @@
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-.sec-login .formulary .post-form {
+section.auth .formulary .post-form {
   display: flex;
   width: 100%;
   padding: 0px 22px;
@@ -33,7 +33,7 @@
   justify-content: center;
   gap: 22px;
 }
-.sec-login .formulary .post-form h1.title {
+section.auth .formulary .post-form h1.title {
   color: var(--black, #000);
   text-align: center;
   font-family: Poppins;
@@ -42,7 +42,7 @@
   font-weight: 700;
   line-height: normal;
 }
-.sec-login .formulary .post-form form {
+section.auth .formulary .post-form form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,13 +50,13 @@
   gap: 26px;
   align-self: stretch;
 }
-.sec-login .formulary .post-form form .input-data {
+section.auth .formulary .post-form form .input-data {
   background-color: transparent;
 }
-.sec-login .formulary .post-form form .input-data input {
+section.auth .formulary .post-form form .input-data input {
   background-color: transparent;
 }
-.sec-login .formulary .post-form form .form-group {
+section.auth .formulary .post-form form .form-group {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@
   gap: 8px;
   align-self: stretch;
 }
-.sec-login .formulary .post-form form .form-group label {
+section.auth .formulary .post-form form .form-group label {
   align-self: stretch;
   color: var(--black, #000);
   font-family: Inter;
@@ -73,10 +73,10 @@
   font-weight: 600;
   line-height: 100%;
 }
-.sec-login .formulary .post-form form .form-group div {
+section.auth .formulary .post-form form .form-group div {
   width: 100%;
 }
-.sec-login .formulary .post-form form .form-group div input {
+section.auth .formulary .post-form form .form-group div input {
   width: 100%;
   display: flex;
   padding: 16px;
@@ -85,22 +85,22 @@
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.4);
 }
-.sec-login .formulary .post-form form .extra {
+section.auth .formulary .post-form form .extra {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
 }
-.sec-login .formulary .post-form form .extra .remember {
+section.auth .formulary .post-form form .extra .remember {
   display: flex;
   align-items: center;
   gap: 8px;
   /* Estilo del cuadro personalizado cuando el checkbox está marcado */
 }
-.sec-login .formulary .post-form form .extra .remember input[type=checkbox]:checked + label {
+section.auth .formulary .post-form form .extra .remember input[type=checkbox]:checked + label {
   color: #007bff;
 }
-.sec-login .formulary .post-form form .extra .remember label {
+section.auth .formulary .post-form form .extra .remember label {
   color: var(--azul-900);
   font-family: Inter;
   font-size: 16px;
@@ -108,7 +108,7 @@
   font-weight: 400;
   line-height: 100%;
 }
-.sec-login .formulary .post-form form .extra a {
+section.auth .formulary .post-form form .extra a {
   color: var(--azul-900, #0D47A1);
   text-align: right;
   font-family: Inter;
@@ -118,19 +118,19 @@
   line-height: 100%;
   text-decoration-line: underline;
 }
-.sec-login .formulary .post-form form button {
+section.auth .formulary .post-form form button {
   width: 100%;
   border: none;
   cursor: pointer;
 }
-.sec-login .formulary .post-form .forgot-password {
+section.auth .formulary .post-form .forgot-password {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
   align-self: stretch;
 }
-.sec-login .formulary .post-form .forgot-password p {
+section.auth .formulary .post-form .forgot-password p {
   color: var(--light-text-secondary, #555);
   text-align: center;
   font-family: Inter;
@@ -139,7 +139,7 @@
   font-weight: 400;
   line-height: 150%;
 }
-.sec-login .formulary .post-form .forgot-password a {
+section.auth .formulary .post-form .forgot-password a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
