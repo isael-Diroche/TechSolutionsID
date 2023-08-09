@@ -4,9 +4,10 @@
 
 {% block content %}
 
+{% include 'widgets/section-header.html'%}
+
 {% include 'widgets/formulario-contacto.html' %}
 
-    
     {% comment %} <div style="background-color: rgba(24, 64, 8); width: 50%; margin: 10% auto; border-radius: 10px; padding: 10px 14px;">
 
         {% if "valido" in request.GET %}
