@@ -1,25 +1,55 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Registro
+Registro
 {% endblock %}
 
 {% load static %}
 
-{%  load crispy_forms_tags %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-<form method="post" action="" style="color: white;">
-    {% csrf_token %}
+<section class="auth sec-register">
+    <div class="formulary">
+        <a href="{% url 'Home'%}" class="button open"><box-icon name='left-arrow-alt' color='#0d47a1'></box-icon>
+            Regresar</a>
+        <div class="post-form">
+            <h1 class="title">Registro</h1>
+            <form method="post" action="">
+                {% csrf_token %}
 
-    <div style="width: 30%; margin: auto;">
+                <div id="div_id_username" class="input-data">
+                    <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
+                        maxlength="150" required="" id="id_username">
+                    <div class="underline"></div>
+                    <label for="id_username">Nombre de usuario</label>
+                    <small style="display: none;" id="hint_id_username" class="form-text text-muted">Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_ </small>
+                </div>
 
-        {{form|crispy}}
-    <button type="submit" class="btn btn-sussess"> Registrate </button>
+                <div id="div_id_password1" class="input-data">
+                    <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+                    <div class="underline"></div>
+                    <label for="id_password1">Contraseña</label>
+                    <small style="display: none;" id="hint_id_password1" class="form-text text-muted"><ul><li>Su contraseña no puede asemejarse tanto a su otra información personal.</li><li>Su contraseña debe contener al menos 8 caracteres.</li><li>Su contraseña no puede ser una clave utilizada comúnmente.</li><li>Su contraseña no puede ser completamente numérica.</li></ul></small>
+                </div>
+
+                <div id="div_id_password2" class="input-data">
+                    <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+                    <div class="underline"></div>
+                    <label for="id_password2">Contraseña(Confirmación)</label>
+                    <small style="display: none;" id="hint_id_password2" class="form-text text-muted">Para verificar, introduzca la misma contraseña anterior.</small>
+                </div>
+
+                <button type="submit" class="button rounded">Registrate</button>
+            <!-- {{form|crispy}} -->
+            </form>
+            <div class="forgot-password">
+                <p>Ya estas registrado?</p>
+                <a href="{% url 'logear'%}" class="">Iniciar sesión</a>
+            </div>
+        </div>
     </div>
-
-
-</form>
+</section>
 
 {% endblock %}

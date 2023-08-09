@@ -1,0 +1,178 @@
+section.auth {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    padding: 70px 129px;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../img/hero-imagen.png');
+    background-size: cover;
+    background-position: center center;
+
+    .formulary {
+        display: flex;
+        width: 450px;
+        padding: 40px 29px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 26px;
+
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.60);
+        box-shadow: 0px 52px 48px -32px #A3B7C7, 0px 25px 32px -32px #8DB4D3;
+        backdrop-filter: blur(5px);
+
+        .post-form {
+            display: flex;
+            width: 100%;
+            padding: 0px 22px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+
+            h1.title {
+                color: var(--black, #000);
+                text-align: center;
+                font-family: Poppins;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 26px;
+                align-self: stretch;
+
+                .input-data {
+                    background-color: transparent;
+
+                    input {
+                        background-color: transparent;
+                    }
+                }
+
+                .form-group {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 8px;
+                    align-self: stretch;
+
+                    label {
+                        align-self: stretch;
+
+                        color: var(--black, #000);
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 100%;
+                    }
+
+                    div {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                            display: flex;
+                            padding: 16px;
+                            align-items: center;
+                            gap: 8px;
+
+                            border-radius: 8px;
+                            border: 1px solid rgba(0, 0, 0, 0.40);
+                        }
+                    }
+
+
+                }
+
+                .extra {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    align-self: stretch;
+
+                    .remember {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        /* Estilo del cuadro personalizado cuando el checkbox está marcado */
+                        input[type="checkbox"]:checked+label {
+                            color: #007bff;
+                        }
+
+                        label {
+                            color: var(--azul-900);
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 100%;
+                        }
+                    }
+
+                    a {
+                        color: var(--azul-900, #0D47A1);
+                        text-align: right;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 100%;
+                        text-decoration-line: underline;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+
+            .forgot-password {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                align-self: stretch;
+
+                p {
+                    color: var(--light-text-secondary, #555);
+                    text-align: center;
+
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    color: var(--light-primary-main, #6B68FF);
+
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+}

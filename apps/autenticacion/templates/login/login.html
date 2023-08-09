@@ -10,43 +10,70 @@
 
 {% block content %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    <!--{{form|crispy}}-->
+<section class="auth sec-login">
+    <div class="formulary">
+        <a href="{% url 'Home'%}" class="button open"><box-icon name='left-arrow-alt' color='#0d47a1' ></box-icon> Regresar</a>
+        <div class="post-form">
+            <h1 class="title">Inicio de sesión</h1>
+            
+            <form action="" method="post">
+                {% csrf_token %}
+                <!--{{form|crispy}}-->
+                <div id="div_id_username" class="input-data">
+                    <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+                    <div class="underline"></div>
+                    <label for="id_username">Usuario</label>
+                </div>
 
-    <div id="div_id_username" class="form-group">
-        <label for="id_username">Usuario</label>
-        <div>
-            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+                <div id="div_id_password" class="input-data">
+                    <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+                    <div class="underline"></div>
+                    <label for="id_password">Contraseña</label>
+                </div>
+
+                
+                <!-- {% if messages %}
+                    {% for mensaje in messages %}
+                        <span class="alert alert-{{mensaje.tags}}">
+                            {{ mensaje }}
+                        </span>
+                    {% endfor %}
+                {% endif %} -->
+
+                <div class="extra">
+                    <div class="remember">
+                        <input type="checkbox" name="remember" id="id_remember">
+                        <label for="id_remember">Recuerdame</label>                        
+                    </div>
+
+                    <a href="#">Olvidaste tu contraseña?</a>
+                </div>
+
+                <button class="button rounded" type="submit">Iniciar Sesión</button>
+            </form>
+
+            <div class="forgot-password">
+                <p>Aun no te haz registrado?</p>
+                <a href="{% url 'Autenticacion'%}" class="">Registrate</a>
+            </div>
         </div>
     </div>
+</section>
 
-    <div id="div_id_password" class="form-group">
-        <label for="id_password" class=" requiredField">Contraseña</label>
-        <div>
-            <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
-        </div>
-    </div>
-
-    <button class="button-rounded" type="submit"> Iniciar Sesión </button>
-
-</form>
-
-<!--form method="post" action="" style="color: white;">
+<!--form method="post" action="">
     {% csrf_token %}
 
-    <div style="width: 30%; margin: auto;">
+    <div>
         {% if messages %}
             {% for mensaje in messages %}
-            <span class="alert alert-{{mensaje.tags}}" style="margin: 20px">
+            <span class="alert alert-{{mensaje.tags}}">
                 {{ mensaje }}
             </span>
             {% endfor %}
         {% endif %}
-        <br/><br/><br/>
         {{form|crispy}}
 
-    <button type="submit" class="btn btn-sussess"> Login </button>
+    <button type="submit">Login</button>
     </div>
 </form-->
 

@@ -1,0 +1,11 @@
+
+<div class="header-section">
+    <div class="heading">
+        <h1>{{request.path|slice:'1:'|slice:'-1'|capfirst}}</h1>
+        <div class="from-to">
+            <a href="{% url 'Home'%}" class="main">Inicio</a>
+            <box-icon name='chevron-right'></box-icon>
+            <a href="#" class="page">{{request.path|slice:'1:'|slice:'-1'|capfirst}}</a>
+        </div>
+    </div>
+</div>
