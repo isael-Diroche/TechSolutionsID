@@ -27,5 +27,11 @@ def categoria(request, categoria_id):
 
 def ver_descripcion_post(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
+    categoria = Categoria.objects.all()
     
-    return render(request, 'posts/descripcion_post.html', {'post': post})
+    context = {
+        'post': post,
+        'categoria': categoria
+    }
+    
+    return render(request, 'posts/descripcion_post.html', context)

@@ -1,16 +1,71 @@
 {% extends "base.html" %}
 
 {% block title %}
-post.title
+    Blog | {{post.title}}
 {% endblock %}
 
 {% load static %}
 
 {% block content %}
 
-{% include 'widgets/section-header.html'%}
+<section class="post-description">
+    <div class="links">
+        <p>Inicio</p>
+        <box-icon name='chevron-right'></box-icon>
+        <a href="{% url 'Blog' %}">Blog</a>
+        <box-icon name='chevron-right'></box-icon>
+        <div class="post-link">
+            <a href="#">{{post.title}}</a>
+        </div>
+    </div>
 
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.description }}</p>
-    <!-- Otros detalles del post -->
+    <div class="content">
+        <div class="Post">
+            <div class="article-presentation">
+                <img src="{{post.imagen.url}}" alt="{{post.title}}">
+                <div class="text">
+                    <div class="tags">
+                        {% for post in posts %}
+                        {% for categoria in post.categorias.all %}
+                            <a href="{% url 'categoria' categoria.id %}">{{ categoria.nombre }}</a> &nbsp; | &nbsp;
+                        {% endfor %}
+                    {% endfor %}
+                    </div>
+                    <h1 class="title">{{ post.title }}</h1>
+                    <div class="author-date">
+                        <div class="author">
+                            <box-icon name='user-circle' type='solid' color='#666666' ></box-icon>
+                            {{post.author}}
+                        </div>|
+                        <div class="date">
+                            <box-icon name='calendar' type='solid' color='#666666'></box-icon>
+                            {{post.created}}
+                        </div>
+                        
+                    </div>
+                    <p class="description">{{ post.description }}</p>
+                </div>
+            </div>
+            <div class="article-content">
+                <h1 class="content-title"></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="share-socials">
+        <hr>
+        <!-- icon copy-->
+        <box-icon name='copy-alt' ></box-icon>
+        <!-- icon facebook-->
+        <box-icon name='facebook-circle' type='logo' ></box-icon>
+        <!-- icon twiter-->
+        <box-icon name='twitter' type='logo' ></box-icon>
+        <!-- icon instagram-->
+        <box-icon name='instagram-alt' type='logo' ></box-icon>
+        <!-- icon pinterest-->
+        <box-icon name='pinterest' type='logo' ></box-icon>
+        <hr>
+    </div>
+</section>
+
 {% endblock %}
