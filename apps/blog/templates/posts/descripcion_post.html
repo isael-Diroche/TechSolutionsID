@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+post.title
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+{% include 'widgets/section-header.html'%}
+
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.description }}</p>
+    <!-- Otros detalles del post -->
+{% endblock %}
