@@ -31,7 +31,6 @@ def ver_descripcion_post(request, post_id):
     
     context = {
         'post': post,
-        'categoria': categoria
     }
     
     return render(request, 'posts/descripcion_post.html', context)

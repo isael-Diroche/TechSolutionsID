@@ -25,11 +25,9 @@
                 <img src="{{post.imagen.url}}" alt="{{post.title}}">
                 <div class="text">
                     <div class="tags">
-                        {% for post in posts %}
-                        {% for categoria in post.categorias.all %}
-                            <a href="{% url 'categoria' categoria.id %}">{{ categoria.nombre }}</a> &nbsp; | &nbsp;
-                        {% endfor %}
-                    {% endfor %}
+                        {% for categoria in post.badge.all %}
+						<div class="badge">{{categoria.nombre}}</div>
+						{% endfor %}
                     </div>
                     <h1 class="title">{{ post.title }}</h1>
                     <div class="author-date">
