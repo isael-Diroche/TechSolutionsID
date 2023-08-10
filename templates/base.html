@@ -35,7 +35,7 @@
                     <li class="item {% if request.path == '/tienda/' %} active {% endif %}">
                         <a href="{% url 'Tienda'%}">Tienda</a>
                     </li>
-                    <li class="item {% if request.path == '/blog/' %} active {% endif %}">
+                    <li class="item {% if '/blog/' in request.path %} active {% endif %}">
                         <a href="{% url 'Blog'%}">Blog</a>
                     </li>
                     <li class="item {% if request.path == '/contacto/' %} active {% endif %}">
