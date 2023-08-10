@@ -1,12 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from apps.blog.models import Post, Categoria
 
 # Create your views here.
 
 def blog(request):
-
+    
+    categoria = Categoria.objects.all()
     posts = Post.objects.all()
-    return render(request, "blog/blog.html", {'posts': posts})
+    
+    context = {
+        'posts': posts,
+        'categoria': categoria
+    }
+    
+    return render(request, "blog/blog.html", context)
 
 # ------------------------------------------------------------------------
 def categoria(request, categoria_id):
@@ -17,3 +24,8 @@ def categoria(request, categoria_id):
     return render(request, 'blog/categoria.html', {'categoria': categoria, 'posts': post})
 
 # ------------------------------------------------------------------------
+
+def ver_descripcion_post(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    
+    return render(request, 'posts/descripcion_post.html', {'post': post})

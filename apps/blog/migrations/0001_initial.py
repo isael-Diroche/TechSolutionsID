@@ -33,13 +33,13 @@ class Migration(migrations.Migration):
             name='Post',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo', models.CharField(max_length=50)),
-                ('contenido', models.CharField(max_length=80)),
+                ('title', models.CharField(max_length=50)),
+                ('description', models.CharField(max_length=80)),
                 ('imagen', models.ImageField(blank=True, null=True, upload_to='blog')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('updated', models.DateTimeField(auto_now_add=True)),
-                ('autor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('categorias', models.ManyToManyField(to='blog.categoria')),
+                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('badge', models.ManyToManyField(to='blog.categoria')),
             ],
             options={
                 'verbose_name': 'post',

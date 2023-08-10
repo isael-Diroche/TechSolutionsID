@@ -16,12 +16,11 @@ class Categoria(Model):
         return self.nombre
 
 class Post(Model):
-    titulo = CharField(max_length=50)
-    contenido = CharField(max_length=80)
+    title = CharField(max_length=100)
+    description = CharField(max_length=250)
     imagen = ImageField(upload_to='blog', null=True, blank=True)
-    autor = ForeignKey(User, on_delete=CASCADE)
-    categorias = ManyToManyField(Categoria)
-
+    author = ForeignKey(User, on_delete=CASCADE)
+    badge = ManyToManyField(Categoria)
     created = DateTimeField(auto_now_add=True)
     updated = DateTimeField(auto_now_add=True)
 
@@ -30,4 +29,4 @@ class Post(Model):
         verbose_name_plural = 'posts'
 
     def __str__(self):
-        return self.titulo
+        return self.title
