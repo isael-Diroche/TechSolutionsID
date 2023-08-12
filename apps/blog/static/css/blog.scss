@@ -143,6 +143,8 @@ section {
                 }
 
                 .article-content {
+                    width: 868.419px;
+
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -177,6 +179,49 @@ section {
             }
 
             // Estilos para los iconos de compartir en redes sociales
+        }
+    }
+}
+
+.article-content {
+    display: flex;
+    width: 868.419px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    
+    h1 {
+        color: #333;
+        font-family: Inter;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 29.4px */
+        text-transform: capitalize;
+    }
+
+    p {
+        color: #666;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; 
+    }
+
+    a {
+        color: #5149e9;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 22.5px */
+    }
+
+    ul {
+        li {
+            list-style: decimal;
         }
     }
 }

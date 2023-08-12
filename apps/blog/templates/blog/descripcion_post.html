@@ -34,7 +34,8 @@
                         <div class="author">
                             <box-icon name='user-circle' type='solid' color='#666666' ></box-icon>
                             {{post.author}}
-                        </div>|
+                        </div>
+                        |
                         <div class="date">
                             <box-icon name='calendar' type='solid' color='#666666'></box-icon>
                             {{post.created}}
@@ -44,9 +45,12 @@
                     <p class="description">{{ post.description }}</p>
                 </div>
             </div>
+            
             <div class="article-content">
-                <h1 class="content-title"></h1>
+                <!-- Widget del Post(Publicacion) -->
+                {% include post_description %}
             </div>
+
         </div>
     </div>
 
