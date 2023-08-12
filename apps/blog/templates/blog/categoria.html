@@ -4,42 +4,50 @@
 
 {% block content %}
 
-    {% for post in posts %}
+{% include 'widgets/section-header.html'%}
 
-    <section class="page-section clearfix">
-    <div class="container">
-      <div class="intro">
-        <img  src="{{post.imagen.url}}" alt="" style="width: 50%;">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4" >
-            <span class="section-heading-lower">{{post.title}}</span>
-            <span class="section-heading-upper">{{post.description}}</span>
-          </h2>
-            <div style="text-align: left; font-size: 0.8em;">
-               <p class="mb-3"> Autor: {{post.author}}</p>
-               <p class="mb-3"> Creado: {{post.created}}</p>
-            </div>
+<section class="sec-blog">
+	<div class="content">
+		{% for post in posts %}
+		<a href="{% url 'post' post.id %}">
+			<article class="card">
+				<div class="imagen">
+					<img src="{{post.imagen.url}}" alt="#">
+					<div class="categories">
+						{% for categoria in post.badge.all %}
+						<div class="badge">{{categoria.nombre}}</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="content">
+					<div class="heading-text">
+						<h3 class="publish">{{post.author}} • {{post.created}}</h3>
+						<div class="heading-icon">
+							<h2 class="heading">{{post.title}}</h2>
+							<box-icon name='link' color="#0D47A1"></box-icon>
+						</div>
+						<div class="description">
+							<p>{{post.description}}</p>
+						</div>
+					</div>
+				</div>
+			</article>
+		</a>
+		{% endfor %}
+	</div>
+</section>
 
 
-        </div>
-      </div>
-    </div>
-    </section>
-    <hr style="background: white;">
+<section>
 
-    {% endfor %}
+	<div style="width:75%; text-align: center; margin:auto;">
+		Categorias:
+		<a href="{% url 'Blog' %}" class="linksCategorias">Todos</a> &nbsp; | &nbsp;
+		{% for cat in categorias %}
+		<a href="{% url 'categoria' cat.id %}" class="linksCategorias">{{ cat.nombre }}</a> &nbsp; | &nbsp;
+		{% endfor %}
+	</div>
 
-    <section>
-
-        <div style="width:75%; color: white; text-align: center; margin:auto;">
-            Categorias:
-            {% for post in posts %}
-                {% for categoria in post.categorias.all %}
-                    <a href="{% url 'categoria' categoria.id %}">{{ categoria.nombre }}</a> &nbsp; | &nbsp;
-                {% endfor %}
-            {% endfor %}
-        </div>
-
-    </section>
+</section>
 
 {% endblock %}
