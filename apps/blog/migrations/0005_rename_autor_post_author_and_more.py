@@ -13,12 +13,12 @@ class Migration(migrations.Migration):
         migrations.RenameField(
             model_name='post',
             old_name='autor',
-            new_name='author',
+            new_name='autor',
         ),
         migrations.RenameField(
             model_name='post',
             old_name='categorias',
-            new_name='badge',
+            new_name='categorias',
         ),
         migrations.RemoveField(
             model_name='post',
