@@ -1,0 +1,22 @@
+
+
+@mixin headline($size, $height) {
+    color: var(--headline, #1E293B);
+
+    font-family: var(--font-primary);
+    font-size: $size;
+    font-style: normal;
+    font-weight: 600;
+    line-height: $height;
+}
+
+@mixin body($size, $height) {
+    color: var(--body, #666);
+
+    font-family: Inter;
+    font-size: $size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $height;
+    letter-spacing: 0.1px;
+}

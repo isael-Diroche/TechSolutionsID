@@ -29,20 +29,20 @@
 						<div class="badge">{{categoria.nombre}}</div>
 						{% endfor %}
                     </div>
-                    <h1 class="title">{{ post.title }}</h1>
+                    <h3 class="title">{{ post.title }}</h3>
                     <div class="author-date">
                         <div class="author">
                             <box-icon name='user-circle' type='solid' color='#666666' ></box-icon>
-                            {{post.author}}
+                            <p>{{post.author}}</p>
                         </div>
                         |
                         <div class="date">
                             <box-icon name='calendar' type='solid' color='#666666'></box-icon>
-                            {{post.created}}
+                            <p>{{post.created|date:"j F Y"}}</p> 
                         </div>
                         
                     </div>
-                    <p class="description">{{ post.description }}</p>
+                    <p>{{ post.description }}</p>
                 </div>
             </div>
             

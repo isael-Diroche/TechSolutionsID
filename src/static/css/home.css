@@ -12,13 +12,79 @@
   --azul-700: #1976D2;
   --azul-800: #1565C0;
   --azul-900: #0D47A1;
+  --font-primary: Inter;
+  --font-secundary: Poppins;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  color: var(--headline, #1E293B);
+  font-family: var(--font-primary);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 76px;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--headline, #1E293B);
+  font-family: var(--font-primary);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px;
+}
+
+h3 {
+  color: var(--headline, #1E293B);
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+h4 {
+  color: var(--headline, #1E293B);
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+h5 {
+  color: var(--headline, #1E293B);
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+h6 {
+  color: var(--headline, #1E293B);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+p {
+  color: var(--body, #666);
   font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1px;
 }
 
 a {
@@ -27,13 +93,6 @@ a {
 
 li {
   list-style: none;
-}
-
-p {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 151.523%;
 }
 
 section {
@@ -72,14 +131,9 @@ section .present .badge {
   line-height: normal;
   text-transform: uppercase;
 }
-section .present .title {
+section .present h2 {
   /* Estilos para la clase "title" dentro de la clase "present" */
   color: var(--azul-900, #0D47A1);
-  font-family: Inter;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
 
 .sec-hero {
@@ -210,15 +264,6 @@ section .present .title {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-}
-.sec-choose-us .content ul li p {
-  /* Estilos para los párrafos <p> dentro de los elementos <li> */
-  color: #666C89;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 151.523%;
 }
 
 .sec-about-us {
@@ -497,14 +542,6 @@ section .present .title {
   text-transform: uppercase;
   background: var(--azul-50, #E3F2FD);
 }
-.sec-faqs aside .present h1 {
-  color: var(--azul-900, #0D47A1);
-  font-family: Inter;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
 .sec-faqs aside ul.content {
   display: flex;
   flex-direction: column;
@@ -530,13 +567,8 @@ section .present .title {
   width: 100%;
   cursor: pointer;
 }
-.sec-faqs aside ul.content li.faq-item .faq-header h1 {
+.sec-faqs aside ul.content li.faq-item .faq-header h5 {
   color: var(--azul-900, #0D47A1);
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }
 .sec-faqs aside ul.content li.faq-item .faq-header .box-icon {
   transform: rotate(0deg);
@@ -548,15 +580,6 @@ section .present .title {
 .sec-faqs aside ul.content li.faq-item .faq-header + p {
   display: none;
 }
-.sec-faqs aside ul.content li.faq-item p {
-  padding: 0px 70px 20px 10px;
-  color: #666C89;
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 151.523%;
-}
 .sec-faqs .img {
   display: flex;
   width: 591px;
@@ -567,7 +590,12 @@ section .present .title {
 }
 
 .sec-contacto {
-  /* Estilos generales para la clase "sec-contacto" */
+  display: flex;
+  width: 1440px;
+  padding: 60px 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
 }
 .sec-contacto .content {
   /* Estilos para la clase "content" dentro de la clase "sec-contacto" */
@@ -585,15 +613,6 @@ section .present .title {
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
-}
-.sec-contacto .content .formulary form .title h1 {
-  /* Estilos para los encabezados <h1> dentro de la clase "title" */
-  color: var(--azul-900, #0D47A1);
-  font-family: Inter;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
 .sec-contacto .content .contact-info {
   /* Estilos para la lista <ul> con clase "contact-info" dentro de la clase "content" */
@@ -780,8 +799,10 @@ nav .top-nav .toggle-menu-btn {
           backdrop-filter: blur(10px);
 }
 .header-section::before {
-  content: ""; /* Necesario para que el pseudo-elemento sea visible */
-  position: absolute; /* Posición absoluta para cubrir todo el contenedor */
+  content: "";
+  /* Necesario para que el pseudo-elemento sea visible */
+  position: absolute;
+  /* Posición absoluta para cubrir todo el contenedor */
   top: 0;
   left: 0;
   width: 100%;
@@ -796,12 +817,6 @@ nav .top-nav .toggle-menu-btn {
   gap: 5px;
 }
 .header-section .heading h1 {
-  color: #000;
-  font-family: Poppins;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
   opacity: 0.8;
 }
 .header-section .heading .from-to {
