@@ -3,7 +3,7 @@
 <form action="" method="POST">
     {% csrf_token %}
     <div class="title">
-        <h1>Envianos un mensaje</h1>
+        <h4>Envianos un mensaje</h4>
         {% if "valido" in request.GET %}
             <p style="color:white;" >Informacion enviada correctamente!</p>
         {% endif %}

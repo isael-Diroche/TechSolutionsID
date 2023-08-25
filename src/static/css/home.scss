@@ -1,3 +1,5 @@
+@import 'mixins';
+
 :root {
     // Colores
     --black: #000;
@@ -14,15 +16,43 @@
     --azul-900: #0D47A1;
 
     // Tipografia
-
+    --font-primary: Inter;
+    --font-secundary: Poppins;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
-    font-family: Inter;
+h1 {
+    @include headline(64px, 76px);
+    font-weight: 700;
+}
+
+h2 {
+    @include headline(36px, 44px);
+}
+
+h3 {
+    @include headline(28px, 36px)
+}
+
+h4 {
+    @include headline(24px, 32px)
+}
+
+h5 {
+    @include headline(20px, 28px)
+}
+
+h6 {
+    @include headline(16px, 20px)
+}
+
+p {
+    @include body(16px, 24px)
 }
 
 a {
@@ -31,13 +61,6 @@ a {
 
 li {
     list-style: none;
-}
-
-p {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 151.523%;
 }
 
 section {
@@ -80,14 +103,10 @@ section {
             text-transform: uppercase;
         }
 
-        .title {
+        h2 {
             /* Estilos para la clase "title" dentro de la clase "present" */
             color: var(--azul-900, #0D47A1);
-            font-family: Inter;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
+
         }
     }
 }
@@ -233,16 +252,6 @@ section {
                     font-style: normal;
                     font-weight: 500;
                     line-height: normal;
-                }
-
-                p {
-                    /* Estilos para los párrafos <p> dentro de los elementos <li> */
-                    color: #666C89;
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 151.523%;
                 }
             }
         }
@@ -562,14 +571,14 @@ section {
                 background: var(--azul-50, #E3F2FD);
             }
 
-            h1 {
-                color: var(--azul-900, #0D47A1);
-                font-family: Inter;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-            }
+            // h1 {
+            //     color: var(--azul-900, #0D47A1);
+            //     font-family: Inter;
+            //     font-size: 32px;
+            //     font-style: normal;
+            //     font-weight: 600;
+            //     line-height: normal;
+            // }
         }
 
         ul.content {
@@ -597,13 +606,8 @@ section {
                     width: 100%;
                     cursor: pointer;
 
-                    h1 {
+                    h5 {
                         color: var(--azul-900, #0D47A1);
-                        font-family: Inter;
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: normal;
                     }
 
                     .box-icon {
@@ -618,16 +622,6 @@ section {
                     +p {
                         display: none;
                     }
-                }
-
-                p {
-                    padding: 0px 70px 20px 10px;
-                    color: #666C89;
-                    font-family: Inter;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 151.523%;
                 }
             }
         }
@@ -645,7 +639,12 @@ section {
 }
 
 .sec-contacto {
-    /* Estilos generales para la clase "sec-contacto" */
+    display: flex;
+    width: 1440px;
+    padding: 60px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
 
     .content {
         /* Estilos para la clase "content" dentro de la clase "sec-contacto" */
@@ -667,15 +666,15 @@ section {
                     gap: 10px;
                     align-self: stretch;
 
-                    h1 {
-                        /* Estilos para los encabezados <h1> dentro de la clase "title" */
-                        color: var(--azul-900, #0D47A1);
-                        font-family: Inter;
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: normal;
-                    }
+                    // h1 {
+                    //     /* Estilos para los encabezados <h1> dentro de la clase "title" */
+                    //     color: var(--azul-900, #0D47A1);
+                    //     font-family: Inter;
+                    //     font-size: 24px;
+                    //     font-style: normal;
+                    //     font-weight: 600;
+                    //     line-height: normal;
+                    // }
                 }
             }
         }
@@ -881,7 +880,6 @@ nav {
     }
 }
 
-
 // Section Header
 
 .header-section {
@@ -899,13 +897,15 @@ nav {
     backdrop-filter: blur(10px);
 
     &::before {
-        content: ''; /* Necesario para que el pseudo-elemento sea visible */
-        position: absolute; /* Posición absoluta para cubrir todo el contenedor */
+        content: '';
+        /* Necesario para que el pseudo-elemento sea visible */
+        position: absolute;
+        /* Posición absoluta para cubrir todo el contenedor */
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(211, 211, 211, 0.5); 
+        background-color: rgba(211, 211, 211, 0.5);
     }
 
     .heading {
@@ -916,12 +916,12 @@ nav {
         gap: 5px;
 
         h1 {
-            color: #000;
-            font-family: Poppins;
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+            // color: #000;
+            // font-family: Poppins;
+            // font-size: 48px;
+            // font-style: normal;
+            // font-weight: 500;
+            // line-height: normal;
 
             opacity: 0.8;
         }

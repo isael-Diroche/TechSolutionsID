@@ -1,3 +1,6 @@
+@import 'mixins.css';
+
+
 section {
     &.post-description {
         display: flex;
@@ -15,7 +18,7 @@ section {
             gap: 10px;
             align-self: stretch;
 
-            p,
+
             a {
                 color: #000;
                 font-family: Inter;
@@ -94,24 +97,15 @@ section {
                             }
                         }
 
-                        .title {
-                            // Estilos para el título "{{ post.title }}"
-                            color: #222;
-
-                            /* H1 */
-                            font-family: Inter;
-                            font-size: 27px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 140%; /* 37.8px */
-                            text-transform: capitalize;
-                        }
 
                         .author-date {
-                            // Estilos para el autor y la fecha "{{post.author}} | {{post.created}}"
                             display: flex;
                             align-items: center;
                             gap: 13px;
+
+                            p {
+                                @include body(14px, 20px)
+                            }
 
                             .author {
                                 display: flex;
@@ -126,19 +120,6 @@ section {
                                 gap: 6px;
                             }
                         }
-
-                        .description {
-                            // Estilos para la descripción "{{ post.description }}"
-                            align-self: stretch;
-                            color: #667085;
-
-                            /* Text md/Normal */
-                            font-family: Inter;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 24px;
-                        }
                     }
                 }
 
@@ -150,17 +131,6 @@ section {
                     justify-content: center;
                     align-items: flex-start;
                     gap: 32px;
-
-                    .content-title {
-                        // Estilos para el título del contenido
-                        color: #333;
-                        font-family: Inter;
-                        font-size: 21px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 140%;
-                        text-transform: capitalize;
-                    }
                 }
             }
         }
@@ -190,25 +160,7 @@ section {
     justify-content: center;
     align-items: flex-start;
     gap: 32px;
-    
-    h1 {
-        color: #333;
-        font-family: Inter;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%; /* 29.4px */
-        text-transform: capitalize;
-    }
 
-    p {
-        color: #666;
-        font-family: Inter;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%; 
-    }
 
     a {
         color: #5149e9;
