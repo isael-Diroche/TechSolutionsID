@@ -21,6 +21,8 @@ class Producto(Model):
     imagen = ImageField(upload_to="tienda", null= True, blank=True)
     precio = FloatField()
     disponibilidad = BooleanField(default=True)
+    precio_anterior = FloatField()
+    descripcion = CharField(max_length=100)
 
     created = DateTimeField(auto_now_add=True)
     updated = DateTimeField(auto_now_add=True)

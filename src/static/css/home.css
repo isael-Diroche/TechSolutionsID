@@ -22,34 +22,6 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: var(--headline, #1E293B);
-  font-family: var(--font-primary);
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 76px;
-  font-weight: 700;
-}
-
-h2 {
-  color: var(--headline, #1E293B);
-  font-family: var(--font-primary);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 44px;
-}
-
-h3 {
-  color: var(--headline, #1E293B);
-  font-family: var(--font-primary);
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 36px;
-}
-
 h4 {
   color: var(--headline, #1E293B);
   font-family: var(--font-primary);
@@ -442,14 +414,6 @@ section .present h2 {
   align-self: stretch;
 }
 .sec-blog .content a .card .content .heading-text .publish {
-  /* Estilos para la clase "publish" dentro de la clase "heading-text" */
-  color: var(--azul-900, #0D47A1);
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  /* 142.857% */
   text-transform: capitalize;
 }
 .sec-blog .content a .card .content .heading-text .heading-icon {
@@ -462,13 +426,7 @@ section .present h2 {
 .sec-blog .content a .card .content .heading-text .heading-icon h2 {
   /* Estilos para los encabezados <h2> dentro de la clase "heading-icon" */
   overflow: hidden;
-  color: #1A1A1A;
   text-overflow: ellipsis;
-  font-family: Inter;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 32px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -614,6 +572,10 @@ section .present h2 {
   gap: 10px;
   align-self: stretch;
 }
+.sec-contacto .content .formulary form .title h4 {
+  /* Estilos para los encabezados <h1> dentro de la clase "title" */
+  color: var(--azul-900, #0D47A1);
+}
 .sec-contacto .content .contact-info {
   /* Estilos para la lista <ul> con clase "contact-info" dentro de la clase "content" */
   display: flex;
@@ -645,14 +607,9 @@ section .present h2 {
   border-radius: 40px;
   background: var(--azul-900, #0D47A1);
 }
-.sec-contacto .content .contact-info li h3 {
+.sec-contacto .content .contact-info li h6 {
   /* Estilos para los encabezados <h3> dentro de los elementos <li> */
   color: var(--azul-900, #0D47A1);
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
 }
 
 nav {

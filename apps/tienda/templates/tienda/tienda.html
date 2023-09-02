@@ -31,27 +31,27 @@
 
         {% for producto in productos %}
 
-            <div class="col-md-3">
-
-                <div class="card" style="width: 100%; margin: 10px 10px; background-color: rgb(88,152,82);">
-
-                    <img src="{{producto.imagen.url}}" alt="#" class="card-img-top">
-
-                    <div class="card-body" style="text-align: center; color: white;">
-
-                        <h7 class="cart-title">{{producto.nombre}} </h7>
-
-                        <p class="cart-text"> {{producto.precio}} $RD </p>
-
+        <a class="item" href="{% url 'carro:agregar' producto.id %}">
+            <img src="{{producto.imagen.url}}" alt="{{producto.nombre}}" title="{{producto.nombre}}">
+            <div class="desc">
+                <h4 class="headline">{{producto.nombre}}</h4>
+                <p class="item-description">{{producto.descripcion}}</p>
+                <div class="price">
+                    <div class="recent">
+                        <span>RD$</span>
+                        <h5 class="headline mount">{{producto.precio|floatformat:2}}</h5>
                     </div>
-
-                    <div class="card-footer text-center">
-                        <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success"> Agregar al carro</a>
-                    </div>
-
+                    {% if producto.precio_anterior != 0 %}
+                        <div class="old">
+                            <span>RD$</span>
+                            <h6 class="headline mount">{{producto.precio_anterior|floatformat:2}}</h6>
+                        </div>
+                    {% else %}
+                        <h6 class="headline">Nuevo</h6>
+                    {% endif %}
                 </div>
-
             </div>
+        </a>
 
         {% endfor %}
 
