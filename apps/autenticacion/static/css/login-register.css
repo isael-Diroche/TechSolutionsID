@@ -33,9 +33,6 @@ section.auth .formulary .post-form {
   justify-content: center;
   gap: 22px;
 }
-section.auth .formulary .post-form h1.title {
-  color: var(--black, #000);
-}
 section.auth .formulary .post-form form {
   width: 100%;
   display: flex;
