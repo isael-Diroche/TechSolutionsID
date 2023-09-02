@@ -35,12 +35,6 @@ section.auth .formulary .post-form {
 }
 section.auth .formulary .post-form h1.title {
   color: var(--black, #000);
-  text-align: center;
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 section.auth .formulary .post-form form {
   width: 100%;

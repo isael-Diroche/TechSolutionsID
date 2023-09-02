@@ -26,18 +26,18 @@
     box-sizing: border-box;
 }
 
-h1 {
-    @include headline(64px, 76px);
-    font-weight: 700;
-}
+// h1 {
+//     @include headline(64px, 76px);
+//     font-weight: 700;
+// }
 
-h2 {
-    @include headline(36px, 44px);
-}
+// h2 {
+//     @include headline(36px, 44px);
+// }
 
-h3 {
-    @include headline(28px, 36px)
-}
+// h3 {
+//     @include headline(28px, 36px)
+// }
 
 h4 {
     @include headline(24px, 32px)
@@ -450,14 +450,6 @@ section {
                         align-self: stretch;
 
                         .publish {
-                            /* Estilos para la clase "publish" dentro de la clase "heading-text" */
-                            color: var(--azul-900, #0D47A1);
-                            font-family: Inter;
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 20px;
-                            /* 142.857% */
                             text-transform: capitalize;
                         }
 
@@ -471,16 +463,7 @@ section {
                             h2 {
                                 /* Estilos para los encabezados <h2> dentro de la clase "heading-icon" */
                                 overflow: hidden;
-                                color: #1A1A1A;
-                                ;
                                 text-overflow: ellipsis;
-
-
-                                font-family: Inter;
-                                font-size: 24px;
-                                font-style: normal;
-                                font-weight: 600;
-                                line-height: 32px;
 
                                 display: -webkit-box;
                                 -webkit-box-orient: vertical;
@@ -666,15 +649,10 @@ section {
                     gap: 10px;
                     align-self: stretch;
 
-                    // h1 {
-                    //     /* Estilos para los encabezados <h1> dentro de la clase "title" */
-                    //     color: var(--azul-900, #0D47A1);
-                    //     font-family: Inter;
-                    //     font-size: 24px;
-                    //     font-style: normal;
-                    //     font-weight: 600;
-                    //     line-height: normal;
-                    // }
+                    h4 {
+                        /* Estilos para los encabezados <h1> dentro de la clase "title" */
+                        color: var(--azul-900, #0D47A1);
+                    }
                 }
             }
         }
@@ -712,14 +690,9 @@ section {
                     background: var(--azul-900, #0D47A1);
                 }
 
-                h3 {
+                h6 {
                     /* Estilos para los encabezados <h3> dentro de los elementos <li> */
                     color: var(--azul-900, #0D47A1);
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 100%;
                 }
             }
         }
