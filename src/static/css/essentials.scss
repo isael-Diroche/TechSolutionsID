@@ -1,0 +1,89 @@
+// Colors
+
+
+// Blue
+
+// FONTS
+
+// Inter
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--Headline, #1E293B);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600 !important;
+}
+
+h1 {
+    &.headline {
+        font-size: 64px;
+        line-height: 76px;
+        font-weight: 700 !important;
+    }
+}
+
+h2 {
+    &.headline {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+h3 {
+    &.headline {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+h4 {
+    &.headline {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+h5 {
+    &.headline {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+h6 {
+    &.headline {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+p {
+    color: var(--Body, #666);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400 !important;
+}
+
+p {
+    &.body-small{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &.body {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+    } 
+
+    &.body-big {
+        font-size: 18px;
+        font-weight: 600 !important;
+        line-height: 20px;
+    }
+}
